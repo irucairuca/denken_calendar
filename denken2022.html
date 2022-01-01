@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <script>
+      //今年の年を取得する
+      var currentTime = new Date();
+      var year = currentTime.getFullYear();
+      //電験の試験日の月と日
+      var month_3 = 8;
+      var day_3 = 21;
+
+      var month_12_1 = 8 ;
+      var day_12_1 = 20 ;
+
+      var month_12_2 = 11 ;
+      var day_12_2 = 13 ;
+      //電工の試験日 筆記試験
+      var month_denkou2_jouki_hikki = 5;
+      var day_denkou2_jouki_hikki = 29;
+
+      var month_denkou2_kaki_hikki = 10;
+      var day_denkou2_kaki_hikki = 30;
+
+      var month_denkou1_hikki = 10;
+      var day_denkou1_hikki=2;
+
+
+      //電工の試験日 実技試験
+      var month_denkou2_jouki_jitugi1 = 7;
+      var day_denkou2_jouki_jitugi1 = 23;
+
+      var month_denkou2_kaki_jitugi1 = 12;
+      var day_denkou2_kaki_jitugi1 = 24;
+
+      var month_denkou2_jouki_jitugi2 = 7;
+      var day_denkou2_jouki_jitugi2 = 24;
+
+      var month_denkou2_kaki_jitugi2 = 12;
+      var day_denkou2_kaki_jitugi2 = 25;
+
+      var month_denkou1_jitugi = 10;
+      var day_denkou1_jitugi=2;
+      //エネルギー管理士試験試験日
+      var month_ene = 8;
+      var day_ene=7;
+
+
+      // 電気主任技術者　試験日
+      date_3 = new Date(year, month_3 -1 , day_3);
+      date_12_1 = new Date(year, month_12_1 -1, day_12_1 );
+      date_12_2 = new Date(year, month_12_2 -1, day_12_2 );
+
+      //電気工事士筆記試験
+      date_denkou2_jouki_hikki = new Date(year, month_denkou2_jouki_hikki -1 , day_denkou2_jouki_hikki);
+      date_denkou2_kaki_hikki = new Date(year, month_denkou2_kaki_hikki -1, day_denkou2_kaki_hikki );
+      date_denkou1_hikki = new Date(year, month_denkou1_hikki -1, day_denkou1_hikki );
+
+      //電気工事士実技試験
+
+      date_denkou2_jouki_jitugi1 = new Date(year, month_denkou2_jouki_jitugi1  -1 , day_denkou2_jouki_jitugi1 );
+      date_denkou2_jouki_jitugi2 = new Date(year, month_denkou2_jouki_jitugi2  -1 , day_denkou2_jouki_jitugi2 );
+      date_denkou2_kaki_jitugi1 = new Date(year, month_denkou2_kaki_jitugi1 -1, day_denkou2_kaki_jitugi1 );
+      date_denkou2_kaki_jitugi2 = new Date(year, month_denkou2_kaki_jitugi2 -1, day_denkou2_kaki_jitugi2 );
+      date_denkou1_jitugi = new Date(year, month_denkou1_jitugi -1, day_denkou1_jitugi );
+      //date_ene= new Date(year, month_ene -1, day_ene );
+
+    </script>
+
+
+    <title>2022年度電気技術系資格試験 試験日一覧</title>
+  </head>
+  <body>
+
+    <div class="jumbotron text-center">
+      <h1>
+
+          <script>
+            document.write(year);
+          </script>
+        年電気技術系資格試験カウントダウン
+      </h1>
+      <p>本年度の電気技術系の資格の試験日と残り日数を表示しています</p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4">
+          <h3>第3種電気主任技術者試験</h3>
+          <p>試験日:
+            <script>
+              document.write(month_3);
+            </script>
+            月
+            <script>
+              document.write(day_3);
+            </script>
+            日
+          </p>
+          <p>試験まで、あと
+            <script language="JavaScript">
+              var now = new Date();
+              var point_3 = date_3;
+              var countdown_3 = Math.ceil((point_3.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+              if (countdown_3 > 0) {
+                document.write(countdown_3);
+              }
+            </script>
+            日!!
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <h3>第1,2種電気主任技術者試験 1次試験</h3>
+          <p>試験日:
+            <script>
+              document.write(month_12_1);
+            </script>
+            月
+            <script>
+              document.write(day_12_1);
+            </script>
+            日
+          </p>
+          <p>試験まで、あと
+            <script language="JavaScript">
+              //var now = new Date();
+              var point_12_1 = date_12_1;
+              var countdown_12_1 = Math.ceil((point_12_1.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+              if (countdown_12_1 > 0) {
+                document.write(countdown_12_1);
+              }
+            </script>
+            日!!
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <h3>第1,2種電気主任技術者試験 2次試験</h3>
+          <p>試験日:
+            <script>
+              document.write(month_12_2);
+            </script>
+            月
+            <script>
+              document.write(day_12_2);
+            </script>
+            日
+          </p>
+          <p>試験まで、あと
+            <script language="JavaScript">
+              //var now = new Date();
+              var point_12_2 = date_12_2;
+              var countdown_12_2 = Math.ceil((point_12_2.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+              if (countdown_12_2 > 0) {
+                document.write(countdown_12_2);
+              }
+            </script>
+            日!!
+          </p>
+        </div>
+
+
+
+        <div class="col-sm-4">
+          <h3>第1種電気工事士試験 筆記試験</h3>
+          <p>試験日:
+            <script>
+              document.write(month_denkou1_hikki);
+            </script>
+            月
+            <script>
+              document.write(day_denkou1_hikki);
+            </script>
+            日
+          </p>
+          <p>試験まで、あと
+            <script language="JavaScript">
+              var now = new Date();
+              var point_denkou1_hikki = date_denkou1_hikki;
+              var countdown_denkou1_hikki = Math.ceil((point_denkou1_hikki.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+              if (countdown_denkou1_hikki > 0) {
+                document.write(countdown_denkou1_hikki);
+              }
+            </script>
+            日!!
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <h3>第2種電気工事士試験 上期筆記試験</h3>
+          <p>試験日:
+            <script>
+              document.write(month_denkou2_jouki_hikki);
+            </script>
+            月
+            <script>
+              document.write(day_denkou2_jouki_hikki);
+            </script>
+            日
+          </p>
+          <p>試験まで、あと
+            <script language="JavaScript">
+              //var now = new Date();
+              var point_denkou2_jouki_hikki = date_denkou2_jouki_hikki;
+              var countdown_denkou2_jouki_hikki = Math.ceil((point_denkou2_jouki_hikki.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+              if (countdown_denkou2_jouki_hikki > 0) {
+                document.write(countdown_denkou2_jouki_hikki);
+              }
+            </script>
+            日!!
+          </p>
+        </div>
+        <div class="col-sm-4">
+          <h3>第2種電気工事士試験 下期筆記試験</h3>
+          <p>試験日:
+            <script>
+              document.write(month_denkou2_kaki_hikki);
+            </script>
+            月
+            <script>
+              document.write(day_denkou2_kaki_hikki);
+            </script>
+            日
+          </p>
+          <p>試験まで、あと
+            <script language="JavaScript">
+              //var now = new Date();
+              var point_denkou2_kaki_hikki = date_denkou2_kaki_hikki;
+              var countdown_denkou2_kaki_hikki = Math.ceil((point_denkou2_kaki_hikki.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+              if (countdown_denkou2_kaki_hikki > 0) {
+                document.write(countdown_denkou2_kaki_hikki);
+              }
+            </script>
+            日!!
+          </p>
+    </div>
+
+
+
+
+<div class="col-sm-4">
+  <h3>第2種電気工事士試験 上期実技試験1</h3>
+  <p>試験日:
+    <script>
+      document.write(month_denkou2_jouki_jitugi1);
+    </script>
+    月
+    <script>
+      document.write(day_denkou2_jouki_jitugi1);
+    </script>
+    日
+  </p>
+  <p>試験まで、あと
+    <script language="JavaScript">
+      var now = new Date();
+      var point_denkou2_jouki_jitugi1 = date_denkou2_jouki_jitugi1;
+      var countdown_denkou2_jouki_jitugi1 = Math.ceil((point_denkou2_jouki_jitugi1.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+      if (countdown_denkou2_jouki_jitugi1 > 0) {
+        document.write(countdown_denkou2_jouki_jitugi1);
+      }
+    </script>
+    日!!
+  </p>
+</div>
+<div class="col-sm-4">
+  <h3>第2種電気工事士試験 上期実技試験2</h3>
+  <p>試験日:
+    <script>
+      document.write(month_denkou2_jouki_jitugi2);
+    </script>
+    月
+    <script>
+      document.write(day_denkou2_jouki_jitugi2);
+    </script>
+    日
+  </p>
+  <p>試験まで、あと
+    <script language="JavaScript">
+      var now = new Date();
+      var point_denkou2_jouki_jitugi2 = date_denkou2_jouki_jitugi2;
+      var countdown_denkou2_jouki_jitugi2 = Math.ceil((point_denkou2_jouki_jitugi2.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+      if (countdown_denkou2_jouki_jitugi2 > 0) {
+        document.write(countdown_denkou2_jouki_jitugi2);
+      }
+    </script>
+    日!!
+  </p>
+</div>
+<div class="col-sm-4">
+  <h3>第2種電気工事士試験 下期実技試験1</h3>
+  <p>試験日:
+    <script>
+      document.write(month_denkou2_kaki_jitugi1);
+    </script>
+    月
+    <script>
+      document.write(day_denkou2_kaki_jitugi1);
+    </script>
+    日
+  </p>
+  <p>試験まで、あと
+    <script language="JavaScript">
+      //var now = new Date();
+      var point_denkou2_kaki_jitugi1 = date_denkou2_kaki_jitugi1;
+      var countdown_denkou2_kaki_jitugi1 = Math.ceil((point_denkou2_kaki_jitugi1.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+      if (countdown_denkou2_kaki_jitugi1 > 0) {
+        document.write(countdown_denkou2_kaki_jitugi1);
+      }
+    </script>
+    日!!
+  </p>
+</div>
+
+
+<div class="col-sm-4">
+  <h3>第2種電気工事士試験 下期実技試験2</h3>
+  <p>試験日:
+    <script>
+      document.write(month_denkou1_jitugi);
+    </script>
+    月
+    <script>
+      document.write(day_denkou1_jitugi);
+    </script>
+    日
+  </p>
+  <p>試験まで、あと
+    <script language="JavaScript">
+      //var now = new Date();
+      var point_denkou1_jitugi = date_denkou1_jitugi;
+      var countdown_denkou1_jitugi = Math.ceil((point_denkou1_jitugi.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+      if (countdown_denkou1_jitugi> 0) {
+        document.write(countdown_denkou1_jitugi);
+      }
+    </script>
+    日!!
+  </p>
+</div>
+<div class="col-sm-4">
+  <h3>第1種電気工事士試験 実技試験</h3>
+  <p>試験日:
+    <script>
+      document.write(month_denkou2_jouki_hikki);
+    </script>
+    月
+    <script>
+      document.write(day_denkou2_jouki_hikki);
+    </script>
+    日
+  </p>
+  <p>試験まで、あと
+    <script language="JavaScript">
+      //var now = new Date();
+      var point_denkou2_jouki_hikki = date_denkou2_jouki_hikki;
+      var countdown_denkou2_jouki_hikki = Math.ceil((point_denkou2_jouki_hikki.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+      if (countdown_denkou2_jouki_hikki > 0) {
+        document.write(countdown_denkou2_jouki_hikki);
+      }
+    </script>
+    日!!
+  </p>
+</div>
+<div class="col-sm-4">
+  <h3>エネルギー管理士試験</h3>
+  <p>試験日:
+    <script>
+      document.write(month_ene);
+    </script>
+    月
+    <script>
+      document.write(day_ene);
+    </script>
+    日
+  </p>
+  <p>試験まで、あと
+    <script language="JavaScript">
+      var date_ene =  new Date(year, month_ene -1, day_ene );;
+      var point_ene = date_ene;
+      var countdown_ene = Math.ceil((point_ene.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+      if (countdown_ene > 0) {
+        document.write(countdown_ene);
+      }
+    </script>
+    日!!
+  </p>
+</div>
+
+
+
+    <footer class="footer mt-4 py-3 bg-light">
+      <div class="container text-center">
+        <span class="text-muted">AraiTatsuhiro(iruca) &copy; All Right Reserved.</span>
+      </div>
+   </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
